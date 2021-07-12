@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const Schema = new Schema({
+const over9000Schema = new Schema({
     day: {
         type: Date,
         default: () => new Date()
@@ -39,6 +39,6 @@ const Schema = new Schema({
     },
 );
 
-const dataBase = mongoose.model("Schema", Schema);
+const over9000 = mongoose.model("over9000", over9000Schema);
 
-module.exports = dataBase;
+module.exports = over9000;
