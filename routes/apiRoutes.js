@@ -31,3 +31,13 @@ router.post("/api/workouts", (req, res) => {
         res.json(err);
       });
   });
+  router.get("/api/workouts/range", (req, res) => {
+    Workout.find({}).limit(7)
+      .then(over9000db => {
+        console.log(over9000db)
+        res.json(over9000db);
+      })
+      .catch(err => {
+        res.json(err);
+      });
+  });
