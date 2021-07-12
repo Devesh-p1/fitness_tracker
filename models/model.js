@@ -39,6 +39,6 @@ const Schema = new Schema({
     },
 );
 
-const dataBase = mongoose.model("", Schema);
+const dataBase = mongoose.model("Schema", Schema);
 
 module.exports = dataBase;
