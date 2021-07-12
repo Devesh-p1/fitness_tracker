@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/workout", { 
+mongoose.connect("mongodb://localhost/over9000db", { 
   useNewUrlParser: true.valueOf,
   useFindandModify: false 
 });
