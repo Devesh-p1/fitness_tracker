@@ -37,7 +37,19 @@ const over9000Schema = new Schema({
         }
       ]
     },
+    {
+      toJSON: {
+        virtuals: true
+      }
+    }
 );
+
+workoutSchema.virtual("totalDuration").get(function () {
+  return this.exercises.reduce((total, exercise) => {
+    return total + exercise.duration;
+  }, 0);
+});
+
 
 const over9000 = mongoose.model("over9000", over9000Schema);
 
