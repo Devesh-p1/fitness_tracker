@@ -44,7 +44,7 @@ const over9000Schema = new Schema({
     }
 );
 
-workoutSchema.virtual("totalDuration").get(function () {
+over9000Schema.virtual("totalDuration").get(function () {
   return this.exercises.reduce((total, exercise) => {
     return total + exercise.duration;
   }, 0);
